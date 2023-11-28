@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="icon" href="images/bookmark.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+
+
+
+  <section class="position-relative text-center py-5">
+
+<div class="container d-flex flex-column justify-content-center align-items-center  w-100">
+
+
+    <div class="content w-100">
+      <h1 class="position-relative py-3">Bookmarker</h1>
+
+      <div class="bookbody  p-3 py-4 mt-5 d-flex flex-column">
+      <h2>
+        <i class="fa-solid fa-bookmark"></i>
+        Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+
+    <form>
+<label for="bookName" class="fw-bold d-flex ps-1">
+  <i class="fa-solid fa-book-bookmark pe-2 pt-1 "></i>
+  Site Name
+</label>
+<input onkeyup="checkName()" type="text" name="name" id="bookName" placeholder="Bookmark Name" class="form-control my-2">
+<div  id="alertName" class="alert alert-danger " style="display: none;">Enter Valid Name start with a capital letter</div>
+
+
+        <label for="bookUrl" class="fw-bold d-flex pt-3 ps-1 ">
+          <i class="fa-solid fa-link pt-1 pe-2"></i>
+          Site URL
+        </label>
+        <input onkeyup="checkUrl()"  type="url" name="url" id="bookUrl" placeholder="Website URL" class="form-control mt-2" />
+        <div  id="alertUrl" class="alert alert-danger " style="display: none;">Enter Valid Url start with <span class="fw-bold">https://</span>  </div>
+      </form>
+
+    <div class="butt">
+      <button onclick="getBook()"  id="sub" class="btn  mt-4" > Submit </button>
+    </div>
+
+
+      </div>
+
+      <table class="table my-4 ">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody" > </tbody>
+      </table>
+    </div>
+
+
+    </div>
+  </section>
+<script src="js/main.js"></script>
+
+</body>
+</html>
